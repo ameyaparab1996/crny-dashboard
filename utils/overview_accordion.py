@@ -21,7 +21,7 @@ characters_list = [
         "image": "https://img.icons8.com/pastel-glyph/64/a82296/trust--v1.png",
         "label": "Became a Caregiver",
         "description": "Artists as Caregivers",
-        "content": "Somr artists stepped into caregiving roles, balancing their creative pursuits with the responsibilities of caring for loved ones, showcasing resilience and compassion in the face of adversity.",
+        "content": "Some artists stepped into caregiving roles, balancing their creative pursuits with the responsibilities of caring for loved ones, showcasing resilience and compassion in the face of adversity.",
     },
     {
         "id": "foodinsecurity",
