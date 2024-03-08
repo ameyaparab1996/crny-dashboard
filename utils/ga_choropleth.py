@@ -6,8 +6,11 @@ import json
 
 # FIGURE:
 def create_choropleth_fig():
-    with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
-        counties = json.load(response)
+    #with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
+    #    counties = json.load(response)
+        
+    with open('data/counties_data.json', 'r') as f:
+        counties = json.load(f)
     county_status_df = pd.read_csv('data/counties.csv')
     fig = px.choropleth(
         county_status_df,
