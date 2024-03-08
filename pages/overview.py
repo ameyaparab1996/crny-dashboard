@@ -23,11 +23,9 @@ dash.register_page(
     order=0,
     title='CRNY Dashboard',
     description="""
-    A comprehensive analysis of global mental health, focusing on the prevalence and impact of anxiety, depressive, 
-    bipolar, schizophrenia, and eating disorders. Explore data-driven insights into mental health trends and their 
-    effects on different demographics.
+    Dive into the vibrant world of artists with this dynamic dashboard, where every click unveils a new chapter in their story. Explore a rich tapestry of figures and statistics, painting a vivid picture of their unique journeys and challenges. Engage with interactive features to delve deeper into the support they need, while narratives provide a captivating glimpse into their diverse challenges. Navigate through the pages to explore the colorful landscape of the artist community.
     """,
-    image='miniature.png'
+    #image='miniature.png'
 )
 
 
