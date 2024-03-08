@@ -30,7 +30,7 @@ def create_choropleth_fig():
     )
     fig.update_layout(#title_text="Distribution of Artists by County", 
                        title_x=0.5, title_font_size=24)
-    fig.update_geos(fitbounds="locations")
+    fig.update_geos(fitbounds="locations", projection_scale=0.2)
     fig.update_layout(
         updatemenus=[
             {
@@ -75,6 +75,7 @@ def create_choropleth_fig():
                 "steps": []
             }
         ],
+   
         plot_bgcolor='rgba(0,0,0,0)', 
         paper_bgcolor='rgba(0,0,0,0)',
         autosize=True
