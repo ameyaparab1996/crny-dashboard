@@ -1,0 +1,253 @@
+discipline,approach,Public Value of Art,count
+Craft,Collaboration with Artists,I’m not sure,270
+Craft,Collaboration with Artists,No,125
+Craft,Collaboration with Artists,Yes,464
+Craft,Collaboration with Non-Arts Practioners,I’m not sure,133
+Craft,Collaboration with Non-Arts Practioners,No,69
+Craft,Collaboration with Non-Arts Practioners,Yes,253
+Craft,Performing/Presenting/Exhibiting,I’m not sure,235
+Craft,Performing/Presenting/Exhibiting,No,114
+Craft,Performing/Presenting/Exhibiting,Yes,399
+Craft,Public Involvement,I’m not sure,169
+Craft,Public Involvement,No,79
+Craft,Public Involvement,Yes,332
+Craft,Solo Artist,I’m not sure,571
+Craft,Solo Artist,No,273
+Craft,Solo Artist,Yes,831
+Craft,Teaching,I’m not sure,220
+Craft,Teaching,No,107
+Craft,Teaching,Yes,412
+Dance,Collaboration with Artists,I’m not sure,262
+Dance,Collaboration with Artists,No,188
+Dance,Collaboration with Artists,Yes,381
+Dance,Collaboration with Non-Arts Practioners,I’m not sure,105
+Dance,Collaboration with Non-Arts Practioners,No,56
+Dance,Collaboration with Non-Arts Practioners,Yes,155
+Dance,Performing/Presenting/Exhibiting,I’m not sure,280
+Dance,Performing/Presenting/Exhibiting,No,192
+Dance,Performing/Presenting/Exhibiting,Yes,385
+Dance,Public Involvement,I’m not sure,169
+Dance,Public Involvement,No,108
+Dance,Public Involvement,Yes,265
+Dance,Solo Artist,I’m not sure,246
+Dance,Solo Artist,No,169
+Dance,Solo Artist,Yes,333
+Dance,Teaching,I’m not sure,205
+Dance,Teaching,No,132
+Dance,Teaching,Yes,305
+Design,Collaboration with Artists,I’m not sure,375
+Design,Collaboration with Artists,No,135
+Design,Collaboration with Artists,Yes,630
+Design,Collaboration with Non-Arts Practioners,I’m not sure,185
+Design,Collaboration with Non-Arts Practioners,No,60
+Design,Collaboration with Non-Arts Practioners,Yes,378
+Design,Performing/Presenting/Exhibiting,I’m not sure,255
+Design,Performing/Presenting/Exhibiting,No,96
+Design,Performing/Presenting/Exhibiting,Yes,494
+Design,Public Involvement,I’m not sure,206
+Design,Public Involvement,No,72
+Design,Public Involvement,Yes,424
+Design,Solo Artist,I’m not sure,624
+Design,Solo Artist,No,226
+Design,Solo Artist,Yes,930
+Design,Teaching,I’m not sure,191
+Design,Teaching,No,78
+Design,Teaching,Yes,430
+Film,Collaboration with Artists,I’m not sure,705
+Film,Collaboration with Artists,No,405
+Film,Collaboration with Artists,Yes,976
+Film,Collaboration with Non-Arts Practioners,I’m not sure,289
+Film,Collaboration with Non-Arts Practioners,No,171
+Film,Collaboration with Non-Arts Practioners,Yes,443
+Film,Performing/Presenting/Exhibiting,I’m not sure,592
+Film,Performing/Presenting/Exhibiting,No,333
+Film,Performing/Presenting/Exhibiting,Yes,857
+Film,Public Involvement,I’m not sure,360
+Film,Public Involvement,No,205
+Film,Public Involvement,Yes,600
+Film,Solo Artist,I’m not sure,707
+Film,Solo Artist,No,386
+Film,Solo Artist,Yes,944
+Film,Teaching,I’m not sure,291
+Film,Teaching,No,183
+Film,Teaching,Yes,507
+Interdisciplinary Arts,Collaboration with Artists,I’m not sure,536
+Interdisciplinary Arts,Collaboration with Artists,No,236
+Interdisciplinary Arts,Collaboration with Artists,Yes,577
+Interdisciplinary Arts,Collaboration with Non-Arts Practioners,I’m not sure,294
+Interdisciplinary Arts,Collaboration with Non-Arts Practioners,No,143
+Interdisciplinary Arts,Collaboration with Non-Arts Practioners,Yes,346
+Interdisciplinary Arts,Performing/Presenting/Exhibiting,I’m not sure,471
+Interdisciplinary Arts,Performing/Presenting/Exhibiting,No,207
+Interdisciplinary Arts,Performing/Presenting/Exhibiting,Yes,535
+Interdisciplinary Arts,Public Involvement,I’m not sure,374
+Interdisciplinary Arts,Public Involvement,No,155
+Interdisciplinary Arts,Public Involvement,Yes,460
+Interdisciplinary Arts,Solo Artist,I’m not sure,685
+Interdisciplinary Arts,Solo Artist,No,291
+Interdisciplinary Arts,Solo Artist,Yes,690
+Interdisciplinary Arts,Teaching,I’m not sure,393
+Interdisciplinary Arts,Teaching,No,160
+Interdisciplinary Arts,Teaching,Yes,465
+Literary Arts,Collaboration with Artists,I’m not sure,444
+Literary Arts,Collaboration with Artists,No,278
+Literary Arts,Collaboration with Artists,Yes,522
+Literary Arts,Collaboration with Non-Arts Practioners,I’m not sure,204
+Literary Arts,Collaboration with Non-Arts Practioners,No,127
+Literary Arts,Collaboration with Non-Arts Practioners,Yes,269
+Literary Arts,Performing/Presenting/Exhibiting,I’m not sure,398
+Literary Arts,Performing/Presenting/Exhibiting,No,245
+Literary Arts,Performing/Presenting/Exhibiting,Yes,492
+Literary Arts,Public Involvement,I’m not sure,283
+Literary Arts,Public Involvement,No,159
+Literary Arts,Public Involvement,Yes,378
+Literary Arts,Solo Artist,I’m not sure,631
+Literary Arts,Solo Artist,No,396
+Literary Arts,Solo Artist,Yes,642
+Literary Arts,Teaching,I’m not sure,313
+Literary Arts,Teaching,No,191
+Literary Arts,Teaching,Yes,366
+Media Arts,Collaboration with Artists,I’m not sure,542
+Media Arts,Collaboration with Artists,No,248
+Media Arts,Collaboration with Artists,Yes,803
+Media Arts,Collaboration with Non-Arts Practioners,I’m not sure,268
+Media Arts,Collaboration with Non-Arts Practioners,No,123
+Media Arts,Collaboration with Non-Arts Practioners,Yes,451
+Media Arts,Performing/Presenting/Exhibiting,I’m not sure,443
+Media Arts,Performing/Presenting/Exhibiting,No,195
+Media Arts,Performing/Presenting/Exhibiting,Yes,678
+Media Arts,Public Involvement,I’m not sure,316
+Media Arts,Public Involvement,No,143
+Media Arts,Public Involvement,Yes,542
+Media Arts,Solo Artist,I’m not sure,681
+Media Arts,Solo Artist,No,319
+Media Arts,Solo Artist,Yes,930
+Media Arts,Teaching,I’m not sure,287
+Media Arts,Teaching,No,118
+Media Arts,Teaching,Yes,500
+Music,Collaboration with Artists,I’m not sure,967
+Music,Collaboration with Artists,No,605
+Music,Collaboration with Artists,Yes,1515
+Music,Collaboration with Non-Arts Practioners,I’m not sure,351
+Music,Collaboration with Non-Arts Practioners,No,206
+Music,Collaboration with Non-Arts Practioners,Yes,590
+Music,Performing/Presenting/Exhibiting,I’m not sure,916
+Music,Performing/Presenting/Exhibiting,No,562
+Music,Performing/Presenting/Exhibiting,Yes,1488
+Music,Public Involvement,I’m not sure,563
+Music,Public Involvement,No,337
+Music,Public Involvement,Yes,948
+Music,Solo Artist,I’m not sure,1026
+Music,Solo Artist,No,594
+Music,Solo Artist,Yes,1547
+Music,Teaching,I’m not sure,557
+Music,Teaching,No,321
+Music,Teaching,Yes,893
+Oral Traditions,Collaboration with Artists,I’m not sure,62
+Oral Traditions,Collaboration with Artists,No,44
+Oral Traditions,Collaboration with Artists,Yes,132
+Oral Traditions,Collaboration with Non-Arts Practioners,I’m not sure,45
+Oral Traditions,Collaboration with Non-Arts Practioners,No,26
+Oral Traditions,Collaboration with Non-Arts Practioners,Yes,78
+Oral Traditions,Performing/Presenting/Exhibiting,I’m not sure,60
+Oral Traditions,Performing/Presenting/Exhibiting,No,33
+Oral Traditions,Performing/Presenting/Exhibiting,Yes,141
+Oral Traditions,Public Involvement,I’m not sure,53
+Oral Traditions,Public Involvement,No,32
+Oral Traditions,Public Involvement,Yes,129
+Oral Traditions,Solo Artist,I’m not sure,75
+Oral Traditions,Solo Artist,No,48
+Oral Traditions,Solo Artist,Yes,149
+Oral Traditions,Teaching,I’m not sure,58
+Oral Traditions,Teaching,No,32
+Oral Traditions,Teaching,Yes,130
+Performance Art,Collaboration with Artists,I’m not sure,511
+Performance Art,Collaboration with Artists,No,277
+Performance Art,Collaboration with Artists,Yes,744
+Performance Art,Collaboration with Non-Arts Practioners,I’m not sure,208
+Performance Art,Collaboration with Non-Arts Practioners,No,102
+Performance Art,Collaboration with Non-Arts Practioners,Yes,342
+Performance Art,Performing/Presenting/Exhibiting,I’m not sure,531
+Performance Art,Performing/Presenting/Exhibiting,No,285
+Performance Art,Performing/Presenting/Exhibiting,Yes,778
+Performance Art,Public Involvement,I’m not sure,342
+Performance Art,Public Involvement,No,172
+Performance Art,Public Involvement,Yes,535
+Performance Art,Solo Artist,I’m not sure,499
+Performance Art,Solo Artist,No,266
+Performance Art,Solo Artist,Yes,712
+Performance Art,Teaching,I’m not sure,295
+Performance Art,Teaching,No,172
+Performance Art,Teaching,Yes,488
+Social Practice,Collaboration with Artists,I’m not sure,213
+Social Practice,Collaboration with Artists,No,137
+Social Practice,Collaboration with Artists,Yes,368
+Social Practice,Collaboration with Non-Arts Practioners,I’m not sure,178
+Social Practice,Collaboration with Non-Arts Practioners,No,98
+Social Practice,Collaboration with Non-Arts Practioners,Yes,269
+Social Practice,Performing/Presenting/Exhibiting,I’m not sure,189
+Social Practice,Performing/Presenting/Exhibiting,No,115
+Social Practice,Performing/Presenting/Exhibiting,Yes,336
+Social Practice,Public Involvement,I’m not sure,220
+Social Practice,Public Involvement,No,135
+Social Practice,Public Involvement,Yes,381
+Social Practice,Solo Artist,I’m not sure,243
+Social Practice,Solo Artist,No,146
+Social Practice,Solo Artist,Yes,382
+Social Practice,Teaching,I’m not sure,205
+Social Practice,Teaching,No,126
+Social Practice,Teaching,Yes,339
+Theater,Collaboration with Artists,I’m not sure,601
+Theater,Collaboration with Artists,No,418
+Theater,Collaboration with Artists,Yes,714
+Theater,Collaboration with Non-Arts Practioners,I’m not sure,191
+Theater,Collaboration with Non-Arts Practioners,No,130
+Theater,Collaboration with Non-Arts Practioners,Yes,271
+Theater,Performing/Presenting/Exhibiting,I’m not sure,590
+Theater,Performing/Presenting/Exhibiting,No,405
+Theater,Performing/Presenting/Exhibiting,Yes,710
+Theater,Public Involvement,I’m not sure,353
+Theater,Public Involvement,No,226
+Theater,Public Involvement,Yes,457
+Theater,Solo Artist,I’m not sure,496
+Theater,Solo Artist,No,328
+Theater,Solo Artist,Yes,596
+Theater,Teaching,I’m not sure,307
+Theater,Teaching,No,226
+Theater,Teaching,Yes,422
+Traditional Arts,Collaboration with Artists,I’m not sure,98
+Traditional Arts,Collaboration with Artists,No,49
+Traditional Arts,Collaboration with Artists,Yes,190
+Traditional Arts,Collaboration with Non-Arts Practioners,I’m not sure,66
+Traditional Arts,Collaboration with Non-Arts Practioners,No,23
+Traditional Arts,Collaboration with Non-Arts Practioners,Yes,106
+Traditional Arts,Performing/Presenting/Exhibiting,I’m not sure,90
+Traditional Arts,Performing/Presenting/Exhibiting,No,41
+Traditional Arts,Performing/Presenting/Exhibiting,Yes,181
+Traditional Arts,Public Involvement,I’m not sure,78
+Traditional Arts,Public Involvement,No,30
+Traditional Arts,Public Involvement,Yes,154
+Traditional Arts,Solo Artist,I’m not sure,212
+Traditional Arts,Solo Artist,No,86
+Traditional Arts,Solo Artist,Yes,332
+Traditional Arts,Teaching,I’m not sure,79
+Traditional Arts,Teaching,No,36
+Traditional Arts,Teaching,Yes,188
+Visual Arts,Collaboration with Artists,I’m not sure,919
+Visual Arts,Collaboration with Artists,No,381
+Visual Arts,Collaboration with Artists,Yes,1335
+Visual Arts,Collaboration with Non-Arts Practioners,I’m not sure,463
+Visual Arts,Collaboration with Non-Arts Practioners,No,198
+Visual Arts,Collaboration with Non-Arts Practioners,Yes,764
+Visual Arts,Performing/Presenting/Exhibiting,I’m not sure,759
+Visual Arts,Performing/Presenting/Exhibiting,No,327
+Visual Arts,Performing/Presenting/Exhibiting,Yes,1153
+Visual Arts,Public Involvement,I’m not sure,535
+Visual Arts,Public Involvement,No,212
+Visual Arts,Public Involvement,Yes,931
+Visual Arts,Solo Artist,I’m not sure,1669
+Visual Arts,Solo Artist,No,720
+Visual Arts,Solo Artist,Yes,2029
+Visual Arts,Teaching,I’m not sure,562
+Visual Arts,Teaching,No,248
+Visual Arts,Teaching,Yes,891

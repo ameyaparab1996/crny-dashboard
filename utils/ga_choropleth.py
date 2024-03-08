@@ -1,59 +1,80 @@
 import plotly.express as px
+import pandas as pd
 from utils.utils_config import BG_TRANSPARENT
-from utils.process_data import country_code_to_continent_name
-
+from urllib.request import urlopen
+import json
 
 # FIGURE:
-def create_choropleth_fig(df, color_scale):
-    df['Continent'] = df['Code'].apply(country_code_to_continent_name)
-
+def create_choropleth_fig():
+    with urlopen('https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json') as response:
+        counties = json.load(response)
+    county_status_df = pd.read_csv('data/counties.csv')
     fig = px.choropleth(
-        df,
-        locations='Code',
-        color='Value',
-        color_continuous_scale=color_scale,
-        custom_data=['Entity', 'Continent']
+        county_status_df,
+        geojson=counties,
+        locations='fips',
+        color='Number of Artists',
+        scope='usa',
+        color_continuous_scale="Agsunset",
+        range_color=[min(county_status_df['Number of Artists']), max(county_status_df['Number of Artists'])],
+        #title='Distribution of Artists by County',
+        labels={'color': 'Population'},
+        hover_name='county',
+        hover_data={'fips': False, 'county': False, 'Number of Artists': True},
+        #height='auto',
+        #width=800,
+        animation_frame='community'
     )
-
-    fig.update_geos(
-        projection_type='orthographic',
-        projection_rotation_lon=-170,  # 110
-        projection_rotation_lat=20,
-        showocean=True,
-        oceancolor='#87CEEB',
-        showcoastlines=True,
-        coastlinecolor='#333333',
-        coastlinewidth=1,
-        showland=True,
-        landcolor='#4B4B4B',  # couleur continent
-        showlakes=False,
-        lakecolor='#202E78',  # couleur lac
-        showcountries=False,
-        countrycolor='white',
-        bgcolor=BG_TRANSPARENT,
-        framewidth=1,
-        framecolor='white',  # couleur du contour
-    )
-
+    fig.update_layout(#title_text="Distribution of Artists by County", 
+                       title_x=0.5, title_font_size=24)
+    fig.update_geos(fitbounds="locations")
     fig.update_layout(
-        margin={"r": 0, "t": 0, "l": 0, "b": 0},
+        updatemenus=[
+            {
+                "buttons": [
+                    {
+                        "args": [None, {"frame": {"duration": 3000, "redraw": True}, "mode": "immediate", "transition": {"duration": 2000}}],
+                        "label": "Play",
+                        "method": "animate",
+                    },
+                    {
+                        "args": [[None], {"frame": {"duration": 3000, "redraw": True}, "mode": "immediate", "transition": {"duration": 0}}],
+                        "label": "Pause",
+                        "method": "animate",
+                    }
+                ],
+                "direction": "left",
+                "pad": {"r": 10, "t": 40},
+                "showactive": False,
+                "type": "buttons",
+                "x": 0.2,
+                "xanchor": "right",
+                "y": 0,
+                "yanchor": "top",
+            }
+        ],
+        sliders=[
+            {
+                "active": 0,
+                "yanchor": "top",
+                "xanchor": "left",
+                "currentvalue": {
+                    "font": {"size": 16},
+                    "prefix": "Community: ",
+                    "visible": True,
+                    "xanchor": "right"
+                },
+                #"transition": {"duration": 3000},  # Adjust the animation duration here (in milliseconds)
+                "pad": {"b": 10, "t": 50},
+                "len": 1,
+                "x": 0,
+                "y": 0,
+                "steps": []
+            }
+        ],
+        plot_bgcolor='rgba(0,0,0,0)', 
         paper_bgcolor='rgba(0,0,0,0)',
-        showlegend=False,
-        coloraxis_showscale=False,
-        hoverlabel=dict(
-            bgcolor='rgba(11, 6, 81, 0.8)',
-            bordercolor='rgba(11, 6, 81, 0.8)',
-            font=dict(
-                color='white'
-            )
-        )
-    )
-
-    fig.update_traces(
-        marker_line_width=1,
-        marker_line_color='white',
-        hovertemplate=None,
-        hoverinfo='none'
+        autosize=True
     )
 
     return fig

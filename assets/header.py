@@ -3,7 +3,7 @@ from dash import dcc, html, Output, Input, State, clientside_callback, Clientsid
 import dash_mantine_components as dmc
 from dash_iconify import DashIconify
 
-GITHUB = 'https://github.com/Tanguy9862/mental-health-app'
+GITHUB = 'https://github.com/ameyaparab1996/crny-dashboard'
 CONTACT_ICON_WIDTH = 30
 
 
@@ -24,35 +24,11 @@ def modal_data_source():
                         
                         # About the Dataset
                         
-                        Mental health is a crucial aspect of our lives and society, influencing well-being, 
-                        work capability, and relationships with friends, family, and community. Hundreds of millions 
-                        of people suffer from mental health conditions annually, with an estimated 1 in 3 women and 1 
-                        in 5 men experiencing major depression in their lifetimes. Other conditions, like schizophrenia 
-                        and bipolar disorder, though less common, also significantly impact people's lives.
+                        CRNY launched the “Portrait of New York State Artists” survey in March 2022 to build a portrait of the needs, circumstances, and experiences of artists across New York State. CRNY will use data from this survey to conduct advocacy and narrative change work, and to assess whether the funding provided through the programs helps meet the needs of individual artists in any substantive or transformational ways.
+
+                        Upon submission of an application to the Guaranteed Income for Artists or Artist Employment Program, artists were invited to answer additional questions, all optional, about their artistic practice, financial circumstances, well-being, pandemic experience, and attitudes about policy and advocacy matters.
                         
-                        While mental illnesses are treatable and their impact can be reduced, treatment is often 
-                        inadequate or of poor quality. Many individuals also feel uncomfortable sharing their symptoms 
-                        with healthcare professionals or acquaintances, making it challenging to accurately estimate 
-                        the prevalence of these conditions.
-                        
-                        To effectively support and treat mental health conditions, comprehensive and reliable data are 
-                        essential. This dataset aims to provide insights into how, when, and why these conditions 
-                        occur, their prevalence, and effective treatment methods.
-                    
-                        ## Source Information
-                        
-                        - **Authors:** Saloni Dattani, Lucas Rodés-Guirao, Hannah Ritchie, and Max Roser (2023)
-                        - **Title:** "Mental Health"
-                        - **Published Online:** OurWorldInData.org
-                        - **Retrieved From:** [Kaggle Dataset](https://www.kaggle.com/datasets/amirhoseinmousavian/mental-health)
-                        - **Temporal Coverage:** From 12/31/1989 to 12/31/2018
-                        - **Geospatial Coverage:** Worldwide
-                        - **License:** Attribution 4.0 International (CC BY 4.0)
-                        
-                        ## Collection Methodology
-                        
-                        The data was collected by visiting the publisher and includes information from the World 
-                        Mental Health surveys conducted between 2001 and 2015.
+                        The first is data from the application that potential program enrollees completed to apply for the CRNY Guaranteed Income (GI) for Artists program. It includes information for all individuals who applied, regardless of whether they were ultimately accepted into the program. The second data source is the Portrait of Artists survey which CRNY administered with the goal of understanding the needs, circumstances, and experiences of artists in New York.
                         
                         """
                     ],

@@ -3,57 +3,60 @@ from dash import html
 
 characters_list = [
     {
+        "id": "accumulatedebt",
+        "image": "https://img.icons8.com/external-nawicon-mixed-nawicon/64/6a00a8/external-Debt-recession-nawicon-mixed-nawicon-2.png",
+        "label": "Accumulated Debt",
+        "description": "Financial Strain",
+        "content": "Many artists faced accumulating debt as a result of canceled performances, exhibitions, and other income-generating opportunities, highlighting the financial challenges and vulnerabilities within the creative community.",
+    },
+    {
         "id": "anxiety",
-        "image": "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-anxiety-psychology"
-                 "-flaticons-lineal-color-flat-icons-2.png",
-        "label": "Anxiety Disorders",
-        "description": "Varieties and Impact",
-        "content": "Anxiety disorders encompass a range of mental health conditions characterized by significant "
-                   "anxiety and fear. These disorders can manifest as generalized anxiety, panic attacks, "
-                   "specific phobias, social anxiety, and more. Common symptoms include excessive worrying, "
-                   "restlessness, and trouble with concentration, often impacting daily activities.",
+        "image": "https://img.icons8.com/ios/50/8b0aa5/shaking.png",
+        "label": "Anxiety",
+        "description": "Navigating Uncertainty",
+        "content": "The COVID-19 lockdown exacerbated anxiety among artists, who grappled with uncertainty about the future of their careers, financial instability due to canceled gigs and exhibitions, and the isolation from their usual creative communities, intensifying feelings of stress and apprehension.",
     },
     {
-        "id": "depressive",
-        "image": "https://img.icons8.com/external-soft-fill-juicy-fish/60/external-depression-bankruptcy-soft-fill"
-                 "-soft-fill-juicy-fish.png",
-        "label": "Depressive Disorders",
-        "description": "More Than Just Sadness",
-        "content": "Depressive disorders represent a group of conditions marked by persistent feelings of sadness and "
-                   "loss of interest. Major depression, persistent depressive disorder, and seasonal affective "
-                   "disorder are among the types. Symptoms can vary but often include changes in sleep, appetite, "
-                   "energy level, and self-esteem.",
+        "id": "caregiver",
+        "image": "https://img.icons8.com/pastel-glyph/64/a82296/trust--v1.png",
+        "label": "Became a Caregiver",
+        "description": "Artists as Caregivers",
+        "content": "Somr artists stepped into caregiving roles, balancing their creative pursuits with the responsibilities of caring for loved ones, showcasing resilience and compassion in the face of adversity.",
     },
     {
-        "id": "bipolar",
-        "image": "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-bipolar-psychology"
-                 "-flaticons-lineal-color-flat-icons-3.png",
-        "label": "Bipolar Disorder",
-        "description": "The Highs and Lows of Mood",
-        "content": "Bipolar disorder is characterized by extreme mood swings, from manic highs to depressive lows. "
-                   "These shifts in mood, energy, and activity levels can affect an individual's ability to carry out "
-                   "day-to-day tasks. Diagnosis and management require a careful and comprehensive approach.",
+        "id": "foodinsecurity",
+        "image": "https://img.icons8.com/external-others-pike-picture/50/c13b82/external-Hunger-poverty-others-pike-picture-2.png",
+        "label": "Food Insecurity",
+        "description": "Starving Creativity",
+        "content": "As the pandemic unfolded, artists found themselves facing the harsh reality of food insecurity, with dwindling income streams and limited access to resources, challenging their ability to sustain both their creative passions and basic nutritional needs.",
     },
     {
-        "id": "schizophrenia",
-        "image": "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-schizophrenia"
-                 "-psychology-flaticons-lineal-color-flat-icons-3.png",
-        "label": "Schizophrenia Disorder",
-        "description": "Complexity in Thought and Perception",
-        "content": "Schizophrenia is a complex and chronic mental disorder characterized by disturbances in thought, "
-                   "perception, and behavior. It often presents with symptoms like hallucinations, delusions, "
-                   "and disorganized thinking, profoundly impacting daily functioning.",
+        "id": "housinginsecurity",
+        "image": "https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/d5536f/external-homeless-recession-tanah-basah-glyph-tanah-basah.png",
+        "label": "Housing Insecurity",
+        "description": "Sheltering Struggles",
+        "content": "COVID-19 exacerbated housing insecurity for artists, as lost income and instability in the arts sector left many struggling to afford rent and facing the threat of eviction, amplifying the challenges of maintaining stable housing in uncertain times.",
     },
     {
-        "id": "eating",
-        "image": "https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-eating-disorder"
-                 "-psychology-flaticons-lineal-color-flat-icons-2.png",
-        "label": "Eating Disorders",
-        "description": "Complexities of Eating Behavior",
-        "content": "Eating disorders are serious conditions affecting eating behaviors and related thoughts and "
-                   "emotions. Common types include anorexia nervosa, bulimia nervosa, and binge-eating disorder. "
-                   "These disorders can have significant physical and psychological impacts and often require "
-                   "comprehensive treatment."
+        "id": "loneliness",
+        "image":"https://img.icons8.com/external-stick-figures-gan-khoon-lay/51/e66c5c/external-alone-suicide-stick-figures-gan-khoon-lay.png",
+        "label": "Loneliness",
+        "description": "Echoes of Solitude",
+        "content": "Social isolation, canceled events, and the absence of in-person collaboration deepened feelings of loneliness among artists highlighting the emotional toll of navigating creative pursuits in solitary environments.",
+    },
+    {
+        "id": "sickness",
+        "image": "https://img.icons8.com/ios-filled/50/f48849/protection-mask.png",
+        "label": "Sickness",
+        "description": "Health in Crisis",
+        "content": "Amid the COVID-19 pandemic, artists confronted sickness and health challenges, grappling with the virus's impact on their physical well-being and creative endeavors, underscoring the vulnerability of artistic communities to the pandemic's health effects."
+    },
+    {
+        "id": "forcedtomove",
+        "image": "https://img.icons8.com/ios-filled/50/fca636/leave-house.png",
+        "label": "Forced to Move",
+        "description": "On the Move",
+        "content": "The years 2020 - 2022 intensified financial burdens for artists relocating to new places, amplifying the challenges of securing stable income and resources amidst uncertain transitions."
     }
 ]
 
@@ -78,7 +81,7 @@ def create_accordion_content(content):
     return dmc.AccordionPanel(dmc.Text(content, size="sm"))
 
 
-disorders_accordion = dmc.Accordion(
+impacts_accordion = dmc.Accordion(
     chevronPosition="right",
     variant="contained",
     children=[

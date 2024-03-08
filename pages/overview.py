@@ -1,20 +1,27 @@
 import dash
+import numpy as np
+import pandas as pd
+import matplotlib as plt
+import plotly.express as px
+from matplotlib import colors
 from dash import html, dcc, callback, Input, Output, State, ctx, no_update, clientside_callback, ClientsideFunction
 from dash_iconify import DashIconify
 from dash.exceptions import PreventUpdate
 import dash_mantine_components as dmc
 import dash_extensions as de
 
-from utils.overview_figures import disorder_bar_fig, graph_functions, prevalence_by_disorder
-from utils.overview_accordion import disorders_accordion
+from utils.overview_figures import status_bar_fig
+#from utils.overview_accordion import disorders_accordion
 from utils.utils_config import FIG_CONFIG_WITHOUT_DOWNLOAD, FIG_CONFIG_WITH_DOWNLOAD, BG_TRANSPARENT, MAIN_TITLE_COLOR, \
     add_loading_overlay
+
+status_df = pd.read_csv("data/status.csv")
 
 dash.register_page(
     __name__,
     path='/',
     order=0,
-    title='Mental Health - Overview',
+    title='CRNY Dashboard',
     description="""
     A comprehensive analysis of global mental health, focusing on the prevalence and impact of anxiety, depressive, 
     bipolar, schizophrenia, and eating disorders. Explore data-driven insights into mental health trends and their 
@@ -24,16 +31,16 @@ dash.register_page(
 )
 
 
-def estimate_case(estimate, disorder_name):
+def estimate_case(estimate, status):
     return [
         dmc.Tooltip(
-            label=f'Estimated affected people by {disorder_name} disorder in millions',
+            label=f'Artists with {status} grants',
             children=[
                 dmc.Group(
                     [
                         DashIconify(icon='fluent:people-team-16-regular', height=35,
                                     color=MAIN_TITLE_COLOR),
-                        dmc.Title(f'{estimate}M', order=2, color=MAIN_TITLE_COLOR)
+                        dmc.Title(f'{estimate}', order=2, color=MAIN_TITLE_COLOR)
                     ],
                     position='center',
                     mb='lg',
@@ -55,41 +62,47 @@ layout = dmc.NotificationsProvider(
                         dmc.Container(
                             [
                                 dmc.Title(
-                                    'Exploring the Impact of Demographic, Economic, and Geographic Factors on Mental '
-                                    'Health Disorders',
+                                    'Creatives Rebuild New York',
                                     color=MAIN_TITLE_COLOR,
-                                    align='justify',
+                                    align='center',
                                     order=1
                                 ),
+                                html.H3(
+                                "Unveiling the Artists' Story",
+                                style={"textAlign": "center"},
+                                ),
+                                html.Br(),
                                 dmc.Text(
-                                    'This application delves into the world of mental health, analyzing how '
-                                    'demographic, economic, and geographic factors influence the prevalence and '
-                                    'treatment of mental disorders across various populations and regions. Utilizing '
-                                    'data from reputable sources, we aim to uncover disparities and trends in mental'
-                                    'health management, shedding light on the challenges and opportunities for'
-                                    'improved care.',
+                                    "An artist, culture bearer, or culture maker (referred to as 'artist' henceforth) embodies a creative spirit, regularly immersing themselves in artistic or cultural practices.",
                                     color='#4B4B4B',
                                     mt='lg',
                                     mb=40,
                                     align='justify'
                                 ),
-                                disorders_accordion
+                                dmc.Text(
+                                    "Dive into the vibrant world of artists with this dynamic dashboard, where every click unveils a new chapter in their story. Explore a rich tapestry of figures and statistics, painting a vivid picture of their unique journeys and challenges. Engage with interactive features to delve deeper into the support they need, while narratives provide a captivating glimpse into their diverse challenges. Navigate through the pages to explore the colorful landscape of the artist community.",
+                                    color='#4B4B4B',
+                                    mt='lg',
+                                    mb=40,
+                                    align='justify'
+                                ),
+                                #disorders_accordion
                             ],
                             px=0
                         )
                     ],
-                    offsetMd=1,
-                    md=6
+                    offsetLg=-1,
+                    md=4
                 ),
                 dmc.Col(
                     [
                         dmc.Stack(
                             [
                                 dmc.Container(id='estimate-container', px=0, children=[html.Div(id='group-estimate')]),
-                                dcc.Graph(figure=disorder_bar_fig, config=FIG_CONFIG_WITH_DOWNLOAD,
-                                          id='disorder-fig', clear_on_unhover=True),
+                                dcc.Graph(figure=status_bar_fig, config=FIG_CONFIG_WITH_DOWNLOAD,
+                                          id='status-fig', clear_on_unhover=True),
                                 dcc.Tooltip(
-                                    id='tooltip-disorder-fig',
+                                    id='tooltip-status-fig',
                                     direction='bottom',
                                     background_color='rgba(11, 6, 81, 0.8)',
                                     border_color='rgba(11, 6, 81, 0.8)',
@@ -104,7 +117,8 @@ layout = dmc.NotificationsProvider(
                             align='center'
                         )
                     ],
-                    md=5
+                    offsetLg=1,
+                    md=3
                 )
             ],
             justify='center',
@@ -117,14 +131,14 @@ layout = dmc.NotificationsProvider(
 
 
 @callback(
-    Output('tooltip-disorder-fig', 'show'),
-    Output('tooltip-disorder-fig', 'bbox'),
-    Output('tooltip-disorder-fig', 'children'),
+    Output('tooltip-status-fig', 'show'),
+    Output('tooltip-status-fig', 'bbox'),
+    Output('tooltip-status-fig', 'children'),
     Output('estimate-container', 'children'),
-    Input('disorder-fig', 'hoverData'),
+    Input('status-fig', 'hoverData'),
     State('estimate-container', 'children')
 )
-def update_disorder_tooltip(hover_data, current_estimated_container):
+def update_status_tooltip(hover_data, current_estimated_container):
 
     if hover_data:
         bbox = hover_data['points'][0]["bbox"]
@@ -132,27 +146,27 @@ def update_disorder_tooltip(hover_data, current_estimated_container):
 
         children = dmc.Container(
             [
-                dmc.Text(f'{label} Disorder Prevalence (%)', italic=True, size='xs', color='white', mb=5),
-                dcc.Graph(figure=graph_functions[label](), config=FIG_CONFIG_WITHOUT_DOWNLOAD)
+                dmc.Text(f'{label} (%)', italic=True, size='xs', color='white', mb=5),
+                #dcc.Graph(figure=graph_functions[label](), config=FIG_CONFIG_WITHOUT_DOWNLOAD)
             ],
             px=0
         )
 
-        disorder_estimated_case = estimate_case(
-            prevalence_by_disorder.query('Disorder == @label')['EstimatedPeopleAffected'].iloc[0], label
+        status_estimated_case = estimate_case(
+            status_df.query('status == @label')['frequency'].iloc[0], label
         )
 
-        return True, bbox, children, disorder_estimated_case
+        return True, bbox, children, status_estimated_case
 
     if not current_estimated_container[0]['props']['children']:
-        disorder_estimated_case = estimate_case(
-            estimate=prevalence_by_disorder.query("Disorder == 'Anxiety'")['EstimatedPeopleAffected'].iloc[0],
-            disorder_name='Anxiety'
+        status_estimated_case = estimate_case(
+            estimate=status_df[status_df['status'] == 'Completed']['frequency'].iloc[0],
+            status='Completed'
         )
     else:
-        disorder_estimated_case = current_estimated_container
+        status_estimated_case = current_estimated_container
 
-    return False, no_update, no_update, disorder_estimated_case
+    return False, no_update, no_update, status_estimated_case
 
 
 @callback(
@@ -181,6 +195,6 @@ def show_notifications(_):
 clientside_callback(
     ClientsideFunction(namespace='clientside', function_name='update_estimate_animation'),
     Output('group-estimate', 'className'),
-    Input('disorder-fig', 'hoverData'),
+    Input('status-fig', 'hoverData'),
 )
 
