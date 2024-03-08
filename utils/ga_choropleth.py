@@ -29,8 +29,10 @@ def create_choropleth_fig():
         animation_frame='community'
     )
     fig.update_layout(#title_text="Distribution of Artists by County", 
-                       title_x=0.5, title_font_size=24)
-    fig.update_geos(fitbounds="locations", projection_scale=0.2)
+                       title_x=0.5, title_font_size=24,geo=dict(
+        projection_scale=0.8  # Scale factor for projection
+    ))
+    fig.update_geos(fitbounds="locations", projection_scale=0.001,resolution=110,framecolor="#6a00a8")
     fig.update_layout(
         updatemenus=[
             {
