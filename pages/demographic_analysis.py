@@ -16,9 +16,10 @@ from utils.utils_config import FIG_CONFIG_WITH_DOWNLOAD, FIG_CONFIG_WITHOUT_DOWN
 
 pd.set_option('display.float_format', '{}'.format)
 county_status_df = pd.read_csv('data/counties.csv')
-ethnicity_df = pd.read_csv('data/ethnicities.csv')
-ethnicity_df.rename(columns={"immigrant": "Immigrant"},inplace=True)
-ethnicity_df['percentage'] = ethnicity_df['percentage'].apply(lambda x: f'{round(x, 2)}%')
+ethnicity_df = pd.read_csv('data/ethnicities_process.csv')
+#ethnicity_df.rename(columns={"immigrant": "Immigrant"},inplace=True)
+#ethnicity_df['percentage'] = ethnicity_df['percentage'].apply(lambda x: f'{round(x, 2)}%')
+#ethnicity_df.to_csv('data/ethnicities_process.csv')
 ethnicity_list = ethnicity_df["ethnicity"].unique()
 
 CHOROPLETH_INTERVAL = 50
@@ -30,7 +31,7 @@ pd.set_option('display.max_columns', None)
 
 dash.register_page(
     __name__,
-    path='/location-analysis',
+    path='/demographic-analysis',
     order=1,
     title='CRNY Dashboard',
     description="""
