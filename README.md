@@ -31,7 +31,8 @@ This project is a collaborative effort between myself and [Mateo Canciani](https
   - Utility scripts for data processing and visualization.
 
 ## Key Data Science Concepts
-- **Interactive Data Visualization:** Enhancing data comprehension through dynamic animated visualizations.
+- **Accurate Data Processing:** A wide range of categorical features is present in the raw data provided by the organization which needed appropriate pre-processing strategy for each variable. Certains columns have been combined and renamed to represent the information in a better way. Moreover, missing values and duplicate values are handled ensuring unified view of the data at hand.
+- **Interactive Data Visualization:** A wide range of visualization have been developed in this project to create a final dashboard of set of visualizations. The data comprehension and user experience is enhanced through dynamic and animated visualizations. The insights generated above could certainly help an organization take necessary actions for solving the problems of the Artists.
 - **Gestalt Principles of Design:** Gestalt principles are an important set of ideas for representing designs and their implementation can greatly improve the aesthetics of a design as well as its functionality and user-friendliness. There are six individual principles commonly associated with gestalt theory: similarity, continuation, closure, proximity, figure/ground, and symmetry & order.
 - **Colors:** Usage of color maps to denoted categories, quantities, separations, and frequencies is essential for pre-attentive processing. All the visualization on this dashboard utilizes the sequential color maps of ‘Plasma’ or ‘Agsunset’ which contain similar shades of color to represent several groups in the data. This makes the dashboard aesthetic and pleasing to the viewer.
 
