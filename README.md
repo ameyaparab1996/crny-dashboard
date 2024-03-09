@@ -16,8 +16,8 @@ The data visualization dashboard provides a holistic exploration of the artist c
 - **Responsive Design:** Fully responsive, ensuring a seamless experience across devices.
 - **User Experience:** Intuitive interface with Dash and Dash Mantine Components.
 
-## Collaboration
-This project is a collaborative effort between myself and [Mateo Canciani](https://github.com/MateoCanciani), combining our skills and ideas to create a comprehensive data science application.
+## About the Project
+This project is was developed as a part of Data Visualization competition organized by the Center of Cultural Affairs in Indiana University O'Neill School of Public and Environmental Affairs. 
 
 ## Application Structure
 - **Root Directory:**
