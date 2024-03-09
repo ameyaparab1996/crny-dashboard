@@ -4,8 +4,9 @@ import pandas as pd
 import matplotlib as plt
 import plotly.express as px
 from matplotlib import colors
-from dash import html, dcc, callback, Input, Output, State, ctx, no_update, clientside_callback, ClientsideFunction
+from dash import Dash, html, dcc, callback, Input, Output, State, ctx, no_update, clientside_callback, ClientsideFunction
 from dash_iconify import DashIconify
+import dash_bootstrap_components as dbc
 from dash.exceptions import PreventUpdate
 import dash_mantine_components as dmc
 import dash_extensions as de
@@ -55,8 +56,10 @@ layout = dmc.NotificationsProvider(
     [
         dmc.Grid(
             [
+          
                 dmc.Col(
-                    [
+                    [   
+                        
                         dmc.Container(
                             [
                                 dmc.Title(
@@ -77,6 +80,45 @@ layout = dmc.NotificationsProvider(
                                     mb=40,
                                     align='justify'
                                 ),
+                                dmc.Grid([
+                                    dmc.Col([
+                                    html.Br(),
+                                    html.H5(
+                                            "Artists Aware of Guranteed Income",
+                                            style={"textAlign": "center", "color":"#f48849"},
+                                            ),
+                                    html.H1(
+                                            "24.66%",
+                                            style={"textAlign": "center", "color": "#a82296"},
+                                            )],
+                                        lg=4),
+                                    dmc.Col([
+                                        dmc.Title(
+                                            '12898',
+                                            color=MAIN_TITLE_COLOR,
+                                            align='center',
+                                            order=1
+                                        ),
+                                        html.H4(
+                                            "Total Applicants",
+                                            style={"textAlign": "center"},
+                                            )],
+                                        lg=4),
+                                    dmc.Col([
+                                        html.Br(),
+                                        html.H5(
+                                                "Artists Experiencing Barriers",
+                                                style={"textAlign": "center", "color":"#f48849"},
+                                                ),
+                                        html.H1(
+                                            "3/4 th",
+                                            style={"textAlign": "center", "color": "#a82296"},
+                                            )],
+                                        lg=4)
+                                        ],
+                                        lg = 4)
+                                    ]),
+                            
                                 dmc.Text(
                                     "Dive into the vibrant world of artists with this dynamic dashboard, where every click unveils a new chapter in their story. Explore a rich tapestry of figures and statistics, painting a vivid picture of their unique journeys and challenges. Engage with interactive features to delve deeper into the support they need, while narratives provide a captivating glimpse into their diverse challenges. Navigate through the pages to explore the colorful landscape of the artist community.",
                                     color='#4B4B4B',
@@ -90,7 +132,7 @@ layout = dmc.NotificationsProvider(
                         )
                     ],
                     offsetLg=-1,
-                    md=4
+                    md=4.5
                 ),
                 dmc.Col(
                     [
@@ -115,8 +157,8 @@ layout = dmc.NotificationsProvider(
                             align='center'
                         )
                     ],
-                    offsetLg=1,
-                    md=3
+                    offsetLg=1.5,
+                    md=2.5
                 )
             ],
             justify='center',
