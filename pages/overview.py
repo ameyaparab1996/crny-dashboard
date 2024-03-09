@@ -87,8 +87,8 @@ layout = dmc.NotificationsProvider(
                                             "Artists Aware of Guranteed Income",
                                             style={"textAlign": "center", "color":"#f48849"},
                                             ),
-                                    html.H1(
-                                            "24.66%",
+                                    html.H2(
+                                            children=["24.66%",html.Sup("")],
                                             style={"textAlign": "center", "color": "#a82296"},
                                             )],
                                         lg=4),
@@ -110,9 +110,10 @@ layout = dmc.NotificationsProvider(
                                                 "Artists Experiencing Barriers",
                                                 style={"textAlign": "center", "color":"#f48849"},
                                                 ),
-                                        html.H1(
-                                            "3/4 th",
+                                        html.H2(
+                                            children=["3/4", html.Sup("th")],
                                             style={"textAlign": "center", "color": "#a82296"},
+                                        
                                             )],
                                         lg=4)
                                     ]),
