@@ -74,7 +74,7 @@ layout = dmc.NotificationsProvider(
                                 ),
                                 html.Br(),
                                 dmc.Text(
-                                    "An artist, culture bearer, or culture maker (referred to as 'artist' henceforth) embodies a creative spirit, regularly immersing themselves in artistic or cultural practices.",
+                                    "An artist, culture bearer, or culture maker (referred to as 'artist') embodies a creative spirit, regularly immersing themselves in artistic or cultural practices.",
                                     color='#4B4B4B',
                                     mt='lg',
                                     mb=40,
@@ -97,6 +97,7 @@ layout = dmc.NotificationsProvider(
                                             '12898',
                                             color=MAIN_TITLE_COLOR,
                                             align='center',
+                                            style={"fontSize":'30'},
                                             order=1
                                         ),
                                         html.H4(
