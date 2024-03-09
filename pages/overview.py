@@ -108,7 +108,7 @@ layout = dmc.NotificationsProvider(
                                     dmc.Col([
                                         html.Br(),
                                         html.H5(
-                                                "Artists Experiencing Barriers",
+                                                "Artists Experiencing Challenges",
                                                 style={"textAlign": "center", "color":"#f48849"},
                                                 ),
                                         html.H2(
