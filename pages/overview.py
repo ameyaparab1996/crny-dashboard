@@ -115,8 +115,6 @@ layout = dmc.NotificationsProvider(
                                             style={"textAlign": "center", "color": "#a82296"},
                                             )],
                                         lg=4)
-                                        ],
-                                        lg = 4)
                                     ]),
                             
                                 dmc.Text(
